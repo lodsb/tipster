@@ -6,5 +6,5 @@ We start by forking [Heise's 2-Klick-Lösung](http://www.heise.de/extras/socials
 
 A project by [lodsb](https://github.com/lodsb) and [hacklschorsch](https://github.com/hacklschorsch).
 
-![Sexy people tip](http://farm3.staticflickr.com/2310/2248285806_2b50de82c7_z.jpg "Sexy people tip")
+![Sexy people tip](http://farm3.staticflickr.com/2310/2248285806_2b50de82c7_z.jpg "Sexy people tip (image by mwichary@flickr)")
 
