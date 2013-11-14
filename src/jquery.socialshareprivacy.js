@@ -174,7 +174,7 @@
 
                 var $container_fb = $('li.facebook', context);
 
-                $('li.facebook div.fb_like img.fb_like_privacy_dummy,li.facebook span.switch', context).live('click', function () {
+                $('li.facebook div.fb_like img.fb_like_privacy_dummy,li.facebook span.switch', context).on('click', function () {
                     if ($container_fb.find('span.switch').hasClass('off')) {
                         $container_fb.addClass('info_off');
                         $container_fb.find('span.switch').addClass('on').removeClass('off').html(options.services.facebook.txt_fb_on);
@@ -207,7 +207,7 @@
 
                 var $container_tw = $('li.twitter', context);
 
-                $('li.twitter div.tweet img,li.twitter span.switch', context).live('click', function () {
+                $('li.twitter div.tweet img,li.twitter span.switch', context).on('click', function () {
                     if ($container_tw.find('span.switch').hasClass('off')) {
                         $container_tw.addClass('info_off');
                         $container_tw.find('span.switch').addClass('on').removeClass('off').html(options.services.twitter.txt_twitter_on);
@@ -235,7 +235,7 @@
 
                 var $container_gplus = $('li.gplus', context);
 
-                $('li.gplus div.gplusone img,li.gplus span.switch', context).live('click', function () {
+                $('li.gplus div.gplusone img,li.gplus span.switch', context).on('click', function () {
                     if ($container_gplus.find('span.switch').hasClass('off')) {
                         $container_gplus.addClass('info_off');
                         $container_gplus.find('span.switch').addClass('on').removeClass('off').html(options.services.gplus.txt_gplus_on);
@@ -254,12 +254,12 @@
             context.append('<li class="settings_info"><div class="settings_info_menu off perma_option_off"><a href="' + options.info_link + '"><span class="help_info icon"><span class="info">' + options.txt_help + '</span></span></a></div></li>');
 
             // Info-Overlays mit leichter Verzoegerung einblenden
-            $('.help_info:not(.info_off)', context).live('mouseenter', function () {
+            $('.help_info:not(.info_off)', context).on('mouseenter', function () {
                 var $info_wrapper = $(this);
                 var timeout_id = window.setTimeout(function () { $($info_wrapper).addClass('display'); }, 500);
                 $(this).data('timeout_id', timeout_id);
             });
-            $('.help_info', context).live('mouseleave', function () {
+            $('.help_info', context).on('mouseleave', function () {
                 var timeout_id = $(this).data('timeout_id');
                 window.clearTimeout(timeout_id);
                 if ($(this).hasClass('display')) {
@@ -335,18 +335,18 @@
                 $container_settings_info.find('span.settings').css('cursor', 'pointer');
 
                 // Einstellungs-Menue bei mouseover ein-/ausblenden
-                $($container_settings_info.find('span.settings'), context).live('mouseenter', function () {
+                $($container_settings_info.find('span.settings'), context).on('mouseenter', function () {
                     var timeout_id = window.setTimeout(function () { $container_settings_info.find('.settings_info_menu').removeClass('off').addClass('on'); }, 500);
                     $(this).data('timeout_id', timeout_id);
                 }); 
-                $($container_settings_info, context).live('mouseleave', function () {
+                $($container_settings_info, context).on('mouseleave', function () {
                     var timeout_id = $(this).data('timeout_id');
                     window.clearTimeout(timeout_id);
                     $container_settings_info.find('.settings_info_menu').removeClass('on').addClass('off');
                 });
 
                 // Klick-Interaktion auf <input> um Dienste dauerhaft ein- oder auszuschalten (Cookie wird gesetzt oder geloescht)
-                $($container_settings_info.find('fieldset input')).live('click', function (event) {
+                $($container_settings_info.find('fieldset input')).on('click', function (event) {
                     var click = event.target.id;
                     var service = click.substr(click.lastIndexOf('_') + 1, click.length);
                     var cookie_name = 'socialSharePrivacy_' + service;
