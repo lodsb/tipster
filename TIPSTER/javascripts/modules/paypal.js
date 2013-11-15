@@ -60,9 +60,20 @@
 			}
 			if (settings.layout === 'line') attrs['data-paypal-button'] = 'compact';
 			
-			var $code = $('<div id="IDIOTMAN">idiotman</div>');
+			var $code = $('<div id="paypal"><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">'+
+			'<input type="hidden" name="cmd" value="_donations">'+
+			'<input type="hidden" name="business" value="penis@penis.org">'+
+			'<input type="hidden" name="lc" value="US">'+
+			'<input type="hidden" name="item_name" value="penis">'+
+			'<input type="hidden" name="amount" value="1337.00">'+
+			'<input type="hidden" name="currency_code" value="CAD">'+
+			'<input type="hidden" name="no_note" value="0">'+
+			'<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">'+
+			'<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer,'+ 'easier way to pay online!">'+
+			'<img alt="foo" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">'+
+			'</form></div>');
 
-			$code.filter('a').attr(attrs);
+			//$code.filter('a').attr(attrs);
 
 			return $code;
 		}
