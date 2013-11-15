@@ -1,0 +1,28 @@
+.social_share_privacy_area.line .paypal img.paypal_privacy_dummy {
+	width: 147px;
+	height: 47px;
+}
+.social_share_privacy_area.line .paypal a,
+.social_share_privacy_area.line .paypal iframe {
+	width: 150px;
+	height: 20px;
+	margin-right: 20px;
+}
+.social_share_privacy_area.line .paypal a {
+	display: inline-block;
+}
+.social_share_privacy_area.box .paypal a,
+.social_share_privacy_area.box .paypal img,
+.social_share_privacy_area.box .paypal iframe {
+	width: 62px;
+	height: 62px;
+}
+.social_share_privacy_area.box .paypal a {
+	display: block;
+	visibility: hidden;
+	margin: auto;
+}
+.social_share_privacy_area.box .paypal .dummy_btn {
+	min-width: 62px;
+	min-height: 67px;
+}
