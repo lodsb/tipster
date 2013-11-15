@@ -60,7 +60,7 @@
 			}
 			if (settings.layout === 'line') attrs['data-paypal-button'] = 'compact';
 			
-			 var $code = $('<div id="IDIOTMAN">idiotman</div>');
+			var $code = $('<div id="IDIOTMAN">idiotman</div>');
 
 			$code.filter('a').attr(attrs);
 
