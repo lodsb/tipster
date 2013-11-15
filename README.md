@@ -1,4 +1,4 @@
-tipster
+Tipster
 =======
 
 Simple and privacy-aware jQuery-Plugin to add various payment providers to web sites.
