@@ -1,6 +1,8 @@
 Tipster
 =======
 
+**This is a work in progress, don't try to use it just yet**
+
 Simple and privacy-aware jQuery-Plugin to add various payment providers to web sites.
 We start by forking [Heise's 2-Klick-Lösung](http://www.heise.de/extras/socialshareprivacy/) and see how far we get from there.
 
